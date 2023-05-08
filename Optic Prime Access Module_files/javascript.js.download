@@ -1,0 +1,115 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+$(document).ready(function () {
+    var n = "#nav",
+        current_shown = "#slide10",
+        slide_num = 10,
+        no = "nav-open";
+    screenShots(slide_num);
+    $("#nav-menu").click(function () {
+        if ($(n).hasClass(no)) {
+            $(n).animate({
+                height: 0
+            }, 320);
+            setTimeout(function () {
+                $(n).removeClass(no).removeAttr("style");
+            }, 320);
+        } else {
+            var newH = $(n).css("height", "auto").height();
+            $(n).height(0).animate({
+                height: newH
+            }, 300);
+            setTimeout(function () {
+                $(n).addClass(no).removeAttr("style");
+            }, 320);
+        }
+    });
+    $("#next").click(function () {
+        if (slide_num == 10) {
+            slide_num = 0;
+        } else {
+            slide_num++
+        }
+
+        screenShots(slide_num)
+    });
+    $("#prev").click(function () {
+        if (slide_num == 0) {
+            slide_num = 10;
+        } else {
+            slide_num--
+        }
+        screenShots(slide_num);
+    });
+
+    function screenShots(slide_num) {
+        current_shown = "#slide" + slide_num
+        $('.screen').each(function () {
+            if ($(this).is(current_shown)) {
+                $(current_shown).show('fast');
+            } else {
+                $(this).hide();
+            }
+        });
+    }
+    $("#OP-send").on("click", function () {
+        var name = $("input[name='name']").val(),
+            message = $("textarea[name='message']").val(),
+            email = $("input[name='email']").val();
+
+        if ($("input[name='address']").val() != "") {
+            alert("nice try");
+        } else if ((name == "") || (message == "") || (email == "")) {
+            alert("more information is required to send message")
+        } else {
+            $.ajax({
+                url: "action.php",
+                type: "POST",
+                data: {
+                    "name": name,
+                    "message": message,
+                    "email": email
+                },
+                success: function (data) {
+                    $("#send-form").after(data),
+                    $("input[name='name']").val(""),
+                    $("textarea[name='message']").val(""),
+                    $("input[name='email']").val(""),
+                    $("#confirm").hide().html("Message has been sent").show("slow");
+                }
+            });
+        };
+    });
+});
+
+}
+/*
+     FILE ARCHIVED ON 02:55:46 Oct 12, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:44:02 May 05, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 494.29
+  exclusion.robots: 0.103
+  exclusion.robots.policy: 0.088
+  cdx.remote: 0.084
+  esindex: 0.015
+  LoadShardBlock: 452.549 (3)
+  PetaboxLoader3.datanode: 176.889 (5)
+  PetaboxLoader3.resolve: 549.282 (4)
+  load_resource: 519.5 (2)
+*/

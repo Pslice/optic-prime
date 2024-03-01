@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<!-- saved from url=(0075)OP.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./OP/analytics.js.download" type="text/javascript"></script>
-<script type="text/javascript" src="OP/bundle-playback.js.download" charset="utf-8"></script>
-<script type="text/javascript" src="OP/wombat.js.download" charset="utf-8"></script>
-
-<link rel="stylesheet" type="text/css" href="OP/banner-styles.css">
-<link rel="stylesheet" type="text/css" href="OP/iconochive.css">
-<!-- End Wayback Rewrite JS Include -->
-
-    
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="Optic Prime Module for MS Access">
-    <link rel="stylesheet" href="OP/stylesheet.css">
-    <link rel="stylesheet" href="OP/mediaqueries.css">
-    <script src="OP/jquery.min.js.download"></script>
+    <link rel="stylesheet" href="{{ asset('public/OP/stylesheet.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/OP/mediaqueries.css') }}">
+    <script src="{{ asset('public/OP/jquery.min.js') }}"></script>
     <title>Optic Prime Access Module</title>
-    <!--[if IE]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if IE]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
 </head>
+
 
     <nav class="nav-bar">
         <div class="nav-hold">
             <a href="#" class="nav-logo">
-                <img src="OP/Optic.png">
+                <img src="/public/OP/Optic.png">
             </a>
             <a id="nav-menu" class="nav-menu">
     	☰
@@ -64,15 +60,15 @@
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick">
                 <input type="hidden" name="hosted_button_id" value="UE6GX4H8QYVB8">
-                <input type="image" src="OP/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="OP/pixel.gif" width="1" height="1">
+                <input type="image" src="{{ asset('public/OP/btn_donateCC_LG.gif') }}" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="{{ asset('public/OP/pixel.gif') }}" width="1" height="1">
             </form>
         </div>
     </div>
     <div class="container" id="download">
         <h1>Download</h1>
 
-        <a href="OP/Optic Prime.accdb">
+        <a href="public/OP/Optic Prime.accdb">
             <input type="button" id="download" class="submit-button" value="Download Optic Prime">
         </a>
 
@@ -84,27 +80,27 @@
     </div>
     <div class="container" id="slide-frame">
 
-        <img id="slide0" class="screen" src="OP/Simple Log.gif" alt="simple log example" style="display: inline; overflow: hidden;">
+        <img id="slide0" class="screen" src="{{ asset('public/OP/Simple Log.gif') }}" alt="simple log example" style="display: inline; overflow: hidden;">
 
-        <img id="slide1" class="screen" src="OP/Simple Entry.gif" alt="Simple Entry" style="display: none;">
+        <img id="slide1" class="screen" src="{{ asset('public/OP/Simple Entry.gif') }}" alt="Simple Entry" style="display: none;">
 
-        <img id="slide2" class="screen" src="OP/Simple Login.gif" alt="Simple Login" style="display: none;">
+        <img id="slide2" class="screen" src="{{ asset('public/OP/Simple Login.gif') }}" alt="Simple Login" style="display: none;">
 
-        <img id="slide3" class="screen" src="OP/Simple Log with Login.gif" alt="Simple Log with login" style="display: none;">
+        <img id="slide3" class="screen" src="{{ asset('public/OP/Simple Log with Login.gif') }}" alt="Simple Log with login" style="display: none;">
 
-        <img id="slide4" class="screen" src="OP/VBA Code.gif" alt="VBA code" style="display: none;">
+        <img id="slide4" class="screen" src="{{ asset('public/OP/VBA Code.gif') }}" alt="VBA code" style="display: none;">
 
-        <img id="slide5" class="screen" src="OP/App Navigation.gif" alt="App Navigation" style="display: none;">
+        <img id="slide5" class="screen" src="{{ asset('public/OP/App Navigation.gif') }}" alt="App Navigation" style="display: none;">
 
-        <img id="slide6" class="screen" src="OP/App Log.gif" alt="App log" style="display: none;">
+        <img id="slide6" class="screen" src="{{ asset('public/OP/App Log.gif') }}" alt="App log" style="display: none;">
 
-        <img id="slide7" class="screen" src="OP/App Entry.gif" alt="App Entry" style="display: none;">
+        <img id="slide7" class="screen" src="{{ asset('public/OP/App Entry.gif') }}" alt="App Entry" style="display: none;">
 
-        <img id="slide8" class="screen" src="OP/App Update.gif" alt="App Update" style="display: none;">
+        <img id="slide8" class="screen" src="{{ asset('public/OP/App Update.gif') }}" alt="App Update" style="display: none;">
 
-        <img id="slide9" class="screen" src="OP/VBA App Code.gif" alt="VBA App Code" style="display: none;">
+        <img id="slide9" class="screen" src="{{ asset('public/OP/VBA App Code.gif') }}" alt="VBA App Code" style="display: none;">
 
-        <img id="slide10" class="screen" src="OP/OpticPrime.gif" alt="Optic Prime" style="display: none; overflow: hidden;">
+        <img id="slide10" class="screen" src="{{ asset('public/OP/OpticPrime.gif') }}" alt="Optic Prime" style="display: none; overflow: hidden;">
     </div>
     <div class="container" id="slide_buttons">
         <input type="button" id="prev" class="submit-button" value="Previous Screen">
@@ -282,9 +278,6 @@
         </form>
     </div>
 
-    <script type="text/javascript" src="OP/javascript.js.download"></script>
+    <script type="text/javascript" src="{{ asset('public/OP/javascript.js') }}"></script>
 
-
-
-
-<scribe-shadow id="crxjs-ext" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible;"><template shadowrootmode="open"><div id="root-scribe-elem" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; overflow: visible; color: rgb(15, 23, 42);"></div><link rel="stylesheet" href="chrome-extension://okfkdaglfjjjfefdcppliegebpoegaii/assets/style.css"></template></scribe-shadow></body></html>
+</body></html>
